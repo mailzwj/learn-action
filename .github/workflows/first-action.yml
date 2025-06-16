@@ -2,13 +2,13 @@ name: First action
 run-name: ${{ github.actor }} is running action
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  first_job:
     runs-on: ubuntu-latest
     steps:
-      -run: echo "Action start >>>"
-      -run: echo "Current branch is ${{github.ref}}"
-      -name: Clone code into Workspace
+      - run: echo "Action start >>>"
+      - run: echo "Current branch is ${{github.ref}}"
+      - name: Clone code into Workspace
         uses: actions/checkout@v4
-      -run: cd ${{ github.workspace }}
-      -run: ls
+      - run: cd ${{ github.workspace }}
+      - run: ls
       
